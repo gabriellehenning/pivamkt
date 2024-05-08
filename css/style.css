@@ -1,0 +1,220 @@
+    body,
+    html {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        overflow: auto;
+    }
+    
+    .content {
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .content-h2 {
+        padding-top: 3rem;
+    }
+    
+    .navbar-item.active {
+        color: #ffd700 !important;
+    }
+    
+    .navbar {
+        background: transparent;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    
+    .navbar-menu {
+        background: rgba(0, 0, 0, 0);
+        z-index: 1001;
+        position: relative;
+    }
+    
+    .navbar-item {
+        color: white !important;
+        text-shadow: 0.125em 0.125em 0.25em rgb(0, 0, 0);
+        transition: color 0.3s ease;
+    }
+    
+    .navbar-item:hover {
+        color: #ffd700 !important;
+    }
+    
+    .pulse {
+        --color: #ffd700;
+        --hover: #DAA520;
+        color: var(--color);
+        transition: 0.25s;
+        background: none;
+        font: inherit;
+        line-height: 1;
+        margin: 0.5em;
+        padding: 1em 2em;
+    }
+    
+    .pulse:hover,
+    .pulse:focus {
+        border-color: var(--hover);
+        color: #fff;
+        animation: pulse 1s;
+        box-shadow: 0 0 0 2em transparent;
+    }
+    
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 var(--hover);
+        }
+    }
+    
+    .cursor {
+        display: inline-block;
+        width: 0.0625rem;
+        height: 1em;
+        background-color: white;
+        animation: blink 1s infinite;
+    }
+    
+    .container {
+        padding-top: 1.5rem;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        color: white !important;
+        text-shadow: 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.5);
+    }
+    
+    .custom-button-container {
+        margin-top: 1em;
+    }
+    
+    .custom-button {
+        border-radius: 1.5625rem;
+        padding: 0.625rem 1.25rem;
+        border: 0.125rem solid #ffd700;
+        background-color: transparent;
+        color: #ffffff;
+    }
+    
+    .custom-button:hover {
+        border-color: #ffd700;
+        background-color: #ffffff21;
+        color: #ffd700;
+    }
+    
+    @media screen and (max-width: 48em) {
+        .content {
+            flex-direction: column;
+            align-items: center;
+        }
+        .content > div {
+            width: 100%;
+            text-align: center;
+        }
+        .navbar {
+            padding: 0 1.25rem;
+        }
+    }
+    
+    .navbar-menu.is-active {
+        transform: translateX(0);
+        position: absolute;
+        right: 0;
+    }
+    
+    .burger span {
+        height: 0.1875rem;
+        width: 1.5625rem;
+        background-color: #ffd700;
+    }
+    
+    .fab {
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+    }
+    
+    .fab:hover {
+        color: #ffd700 !important;
+    }
+    
+    .footer, .footer-inicio {
+        background: transparent;
+        color: #fff;
+        padding: 2em 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    
+    .footer p, .footer-inicio p {
+        margin-bottom: 0.5em;
+    }
+    
+    .footer a, .footer-inicio a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .footer a:hover, .footer-inicio a:hover {
+        color: #ffd700;
+    }
+    
+    .footer-fixed {
+        position: fixed;
+        bottom: 0;
+    }
+    
+    .card-spacing {
+        margin-top: 1em;
+        margin-bottom: 1.25rem;
+    }
+    
+    .card-tall {
+        height: 35.625rem;
+    }
+    
+    .nome-container {
+        margin-top: 3.125rem;
+    }
+    
+    .card-infos{
+        margin-top: 2.1875rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .card {
+        position: relative;
+        z-index: 1;
+        background-color: transparent;
+        border-radius: 0.9375rem;
+        box-shadow: 0 0.25rem 0.5rem 0 rgba(0,0,0,0.2);
+        padding: 1.25rem;
+        transition: box-shadow 0.3s ease;
+        border: 0.125rem solid #ffd700;
+    }
+    
+    .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(163, 161, 151, 0.33);
+        z-index: -1;
+        border-radius: 0.9375rem;
+    }
+    
+    .card:hover {
+        box-shadow: 0 0.5rem 1rem 0 rgba(230, 12, 12, 0.2);
+    }
