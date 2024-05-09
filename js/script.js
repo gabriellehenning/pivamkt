@@ -53,3 +53,16 @@ function typeWriter() {
 typeWriter();
 
 
+// ANIMACAO INICIO
+var myVideo = document.getElementById('myVideo');
+
+myVideo.onended = function() {
+    // Pausa o vídeo
+    this.pause();
+
+    // Inicia um temporizador de 2 segundos
+    setTimeout(function() {
+        // Reinicia o vídeo
+        myVideo.play();
+    }, 2000); // 2000 milissegundos = 2 segundos
+};
