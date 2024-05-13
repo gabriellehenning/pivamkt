@@ -9,7 +9,7 @@ html {
     overflow-x: hidden;
 }
 .video-container {
-    margin-top: 1.25rem;
+    margin-top: 1.25rem; 
 }
 .content {
     align-items: center;
@@ -22,6 +22,7 @@ html {
 
 .navbar-item.active {
     color: #ffd700 !important;
+    border: 2px solid #ffd700;
 }
 
 .navbar {
@@ -32,7 +33,9 @@ html {
 }
 
 .navbar-menu {
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.8); /* Altera a cor de fundo para preto semi-transparente */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra de caixa */
+    transition: all 0.3s ease; /* Adiciona uma transição suave para todas as propriedades */
     z-index: 1001;
     position: relative;
 }
@@ -57,12 +60,13 @@ html {
     line-height: 1;
     margin: 0.5em;
     padding: 1em 2em;
+    border-radius: 25px; /* Adiciona bordas arredondadas */
 }
 
 .pulse:hover,
 .pulse:focus {
     border-color: var(--hover);
-    color: #fff;
+    color: #ffd700;
     animation: pulse 1s;
     box-shadow: 0 0 0 2em transparent;
 }
@@ -113,30 +117,31 @@ h3 {
 
 
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 48em) {
+    body, html {
+        font-size: 18px; /* Aumenta o tamanho da fonte */
+    }
+
+    .navbar-burger.burger {
+        color: #080808;
+        background-color: #ffd700;
+        border-radius: 5px; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); 
+        transition: all 0.3s ease; 
+    }
+    
+    .navbar-burger.burger:hover {
+        background-color: #ffaa00; 
+    }
 
     .video-container {
-        margin-top: 3.125rem;/* Ajuste este valor conforme necessário */}
-        
-        .content {
-            flex-direction: column;
-            align-items: center;
-            margin-top: 1.25rem; /* Ajuste este valor conforme necessário */
-        }
-
-}
-
-
-
-@media screen and (max-width: 660px) {
-    .video-container {
-        margin-top: 0.125rem;/* Ajuste este valor conforme necessário */
+        margin-top: 8.25rem; /* Aumenta o espaçamento */
     }
     
     .content {
         flex-direction: column;
         align-items: center;
-        margin-top: 1.25rem; /* Ajuste este valor conforme necessário */
+        margin-top: 2.25rem; /* Aumenta o espaçamento */
     }
 
     .content>div {
@@ -147,28 +152,34 @@ h3 {
     .navbar {
         padding: 0 1.25rem;
     }
-}
 
-.navbar-menu.is-active {
-    transform: translateX(0);
-    position: absolute;
-    right: 0;
-}
+    .pulse {
+        font-size: 1.2em; /* Aumenta o tamanho do botão */
+        margin: 1em; /* Aumenta o espaçamento */
+    }
 
-.burger span {
-    height: 0.1875rem;
-    width: 1.5625rem;
-    background-color: #ffd700;
-}
+    .custom-button {
+        font-size: 1.2em; /* Aumenta o tamanho do botão */
+        padding: 1rem 2rem; /* Aumenta o padding do botão */
+    }
 
-.fab {
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+    h1, h2, h3 {
+        font-size: 2em; /* Aumenta o tamanho da fonte dos títulos */
+    }
+
+    .navbar-item {
+        font-size: 1.2em; /* Aumenta o tamanho da fonte dos itens da navbar */
+    }
+
+    .fab {
+        font-size: 2rem; /* Aumenta o tamanho da fonte dos ícones */
+    }
 }
 
 .fab:hover {
     color: #ffd700 !important;
 }
+
 
 .footer,
 .footer-inicio {
@@ -203,13 +214,14 @@ h3 {
     bottom: 0;
 }
 
+/* SOBRE */
 .card-spacing {
     margin-top: 1em;
     margin-bottom: 1.25rem;
 }
 
 .card-tall {
-    height: 35.625rem;
+    height: 31.10rem;
 }
 
 .nome-container {
@@ -241,7 +253,7 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(163, 161, 151, 0.33);
+    background-color: rgba(163, 161, 151, 0.082);
     z-index: -1;
     border-radius: 0.9375rem;
 }
@@ -252,24 +264,39 @@ h3 {
 
 /* VIDEO INICIO */
 
-
-
 .hero-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .video-container {
-    margin-bottom: 0;
+    margin-bottom: -50px;
+    /* Ajuste este valor conforme necessário */
 }
 
 .container.has-text-centered {
-    margin-top: 0;
+    margin-top: -50px;
+    /* Ajuste este valor conforme necessário */
 }
 
-@media screen and (min-width: 1024px) {
-    .container.has-text-centered {
-        margin-top: -13vh;
-    }
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.897);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffd700;
+    border-radius: 10px;
+    border: 2px solid #000000; /* Adiciona uma borda ao redor do polegar da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #DAA520; /* Uma cor amarela um pouco mais escura quando o mouse passa por cima */
 }
