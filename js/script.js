@@ -32,7 +32,7 @@ navbarLinks.forEach(link => {
 /* Efeito typewrite */
 
 var i = 0;
-var txt = 'Seja bem vindo'; /* O texto que você quer que apareça como se estivesse sendo digitado */
+var txt = 'Brunno Piva'; /* O texto que você quer que apareça como se estivesse sendo digitado */
 var typingSpeed = 80; /* A velocidade de digitação */
 
 function typeWriter() {
@@ -43,13 +43,9 @@ function typeWriter() {
   } else if (i === txt.length) {
     setTimeout(() => {
       document.querySelector('.custom-title').innerHTML = txt; // remove o cursor
-      setTimeout(() => {
-        document.querySelector('.custom-title').innerHTML = txt + ' <span class="emoji">👍</span>'; // adiciona o emoji de 'joia' com a classe 'emoji'
-      }, typingSpeed * 10);
     }, typingSpeed);
   }
 }
-
 typeWriter();
 
 
@@ -123,8 +119,8 @@ class TextScramble {
   }
 }
 
-const phrasesH2 = ['Olá', 'Hello', 'Hola'];
-const phrasesH3 = ['Uma jornada', 'autêntica', 'between knowing the path', 'and walking the path'];
+const phrasesH2 = ['Bem Vindo', 'Welcome', 'Bienvenido'];
+
 
 const elH2 = document.querySelector('h2.text');
 const elH3 = document.querySelector('h3.text');
@@ -151,3 +147,5 @@ const nextH3 = () => {
 
 nextH2();
 nextH3();
+
+
